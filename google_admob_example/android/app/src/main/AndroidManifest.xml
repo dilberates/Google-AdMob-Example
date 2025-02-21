@@ -3,9 +3,9 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     
     <application
-        android:label="google_admob_example"
+        android:label="Memory"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         
         <!-- AdMob uygulama ID'si -->
         <meta-data

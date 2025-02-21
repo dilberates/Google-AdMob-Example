@@ -25,9 +25,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'AdMob Demo Game',
+      title: 'Memory',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF6200EE), // Koyu mor
+          secondary: const Color(0xFF00C4B4), // Yeşilimsi turkuaz
+          brightness: Brightness.light,
+          primary: const Color.fromARGB(255, 107, 27, 218),
+          onPrimary: Colors.white,
+          primaryContainer: const Color(0xFFF2E7FE), // Çok açık mor
+          onPrimaryContainer: const Color(0xFF3700B3), // Derin mor
+          secondaryContainer: const Color(0xFFE3F2FD), // Açık mavi
+          onSecondaryContainer: const Color(0xFF1565C0), // Koyu mavi
+          surface: Colors.white,
+        ),
         useMaterial3: true,
       ),
       home: const HomeScreen(),
