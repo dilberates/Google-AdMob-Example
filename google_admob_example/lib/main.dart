@@ -6,10 +6,11 @@ import 'view/screens/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // AdMob'u başlatıyoruz
+  // AdMob servisini başlat
   await MobileAds.instance.initialize();
 
   runApp(
+    // Provider ile state management yapısını kur
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => GameProvider()),
@@ -27,9 +28,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Memory',
       theme: ThemeData(
+        // Uygulama genelinde kullanılacak renk şeması
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF6200EE), // Koyu mor
-          secondary: const Color(0xFF00C4B4), // Yeşilimsi turkuaz
+          seedColor: const Color(0xFF6200EE), // Ana tema rengi
+          secondary: const Color(0xFF00C4B4), // İkincil tema rengi
           brightness: Brightness.light,
           primary: const Color.fromARGB(255, 107, 27, 218),
           onPrimary: Colors.white,
@@ -39,7 +41,7 @@ class MyApp extends StatelessWidget {
           onSecondaryContainer: const Color(0xFF1565C0), // Koyu mavi
           surface: Colors.white,
         ),
-        useMaterial3: true,
+        useMaterial3: true, // Material 3 tasarım sistemini kullan
       ),
       home: const HomeScreen(),
     );
