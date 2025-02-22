@@ -28,20 +28,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Memory',
       theme: ThemeData(
-        // Uygulama genelinde kullanılacak renk şeması
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF6200EE), // Ana tema rengi
-          secondary: const Color(0xFF00C4B4), // İkincil tema rengi
+          seedColor: const Color(0xFF6200EE),
+          secondary: const Color(0xFF00C4B4),
           brightness: Brightness.light,
           primary: const Color.fromARGB(255, 107, 27, 218),
           onPrimary: Colors.white,
-          primaryContainer: const Color(0xFFF2E7FE), // Çok açık mor
-          onPrimaryContainer: const Color(0xFF3700B3), // Derin mor
-          secondaryContainer: const Color(0xFFE3F2FD), // Açık mavi
-          onSecondaryContainer: const Color(0xFF1565C0), // Koyu mavi
+          primaryContainer: const Color(0xFFF2E7FE),
+          onPrimaryContainer: const Color(0xFF3700B3),
+          secondaryContainer: const Color(0xFFE3F2FD),
+          onSecondaryContainer: const Color(0xFF1565C0),
           surface: Colors.white,
         ),
-        useMaterial3: true, // Material 3 tasarım sistemini kullan
+        useMaterial3: true,
       ),
       home: const HomeScreen(),
     );

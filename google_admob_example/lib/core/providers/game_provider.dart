@@ -110,6 +110,7 @@ class GameProvider extends ChangeNotifier {
         notifyListeners();
 
         // Oyun bitti mi kontrol et
+        // BURADA BİR HATAMIZ VAR !!!!!
         if (_isMatched.every((matched) => matched)) {
           showRewardedAd(); // Oyun bittiğinde ödüllü reklam göster
         }
@@ -124,7 +125,7 @@ class GameProvider extends ChangeNotifier {
   // Banner reklamı yükleme
   void _loadBannerAd() {
     _bannerAd = BannerAd(
-      size: AdSize.banner,
+      size: AdSize.fullBanner,
       adUnitId: Platform.isAndroid
           // Android için test Interstitial ID
           ? 'ca-app-pub-3940256099942544/6300978111'
